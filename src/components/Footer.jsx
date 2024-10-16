@@ -50,10 +50,10 @@ export default function Footer() {
     const id = toast.loading("Please wait...");
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        "service_p2yodua",
+        "template_j91pso1",
         form.current,
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+        "eGFJeT2DEhKDQpEGC"
       )
       .then(
         (result) => {
@@ -140,13 +140,13 @@ export default function Footer() {
                 <Input
                   type={"text"}
                   placeholder={"Full Name"}
-                  name={"user_name"}
+                  name={"from_name"}
                 />
-                <Input type="email" placeholder="Email" name={"user_email"} />
+                <Input type="email" placeholder="Email" name={"from_email"} />
                 <Input
                   type="text"
                   placeholder="Phone Number"
-                  name={"user_phoneNumber"}
+                  name={"from_phoneNumber"}
                 />
                 {/* <ReCAPTCHA
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
@@ -168,7 +168,7 @@ export default function Footer() {
               <div className="flex flex-col w-full md:w-fit gap-3">
                 <textarea
                   placeholder="Message"
-                  name="user_message"
+                  name="message"
                   className="p-4 mt-4 h-[200px] text-black"
                   required
                 />
